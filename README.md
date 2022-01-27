@@ -31,7 +31,7 @@ docker-compose stop
 
 ##### Without Docker (locally)
 
-# First, Install the needed packages
+# First, Install the needed packages. Run the following command in the project root path:
 npm install
 
 # Then start both Node and React
@@ -40,5 +40,13 @@ npm start
 
 Using docker the application will be available under `http://localhost:3001`. Otherwise, it will be under port `3000`.
 
+## Run the tests
+After installing packages and running the app, run the tests using the following command:
+```bash
+npm run cypress:open
+```
+Cypress will start. There're two possibilities:
+* To run tests for a particular feature.
+* To run all the tests for all the features.
 
 <sub>Special thanks to <a href="http://www.jeffersonribeiro.com/">Jefferson Ribeiro</a> and all contributors for this amazing <a href="https://github.com/damonpam/react-shopping-cart/tree/staging">shopping cart.</a></sub>
