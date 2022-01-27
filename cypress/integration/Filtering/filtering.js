@@ -1,4 +1,22 @@
-describe('Filter products by size', () => {
+import {Given, When, Then} from "cypress-cucumber-preprocessor/steps"
+
+Given('I open the PLP', () => {
+    cy.visit('localhost:3000')
+    cy.wait(2000)
+    cy.get('[class=products-found]').invoke('text').as('txt')
+});
+
+When('I click in the XS size filter', () => {
+    cy.get('[class=checkmark]').contains('XS').click()
+    cy.wait(2000)
+})
+
+Then('Only XS size tshirts are shown', () => {
+    cy.get('[class=products-found]').should('not.have.text', '@txt')
+})
+
+
+/* describe('Filter products by size', () => {
     beforeEach(() => {
         cy.visit('localhost:3000')
         cy.wait(2000)
@@ -45,4 +63,4 @@ describe('Filter products by size', () => {
         cy.get('[class=products-found]').should('not.have.text', '@txt')
         cy.wait(2000)
     })
-})
+}) */
