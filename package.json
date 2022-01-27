@@ -36,7 +36,7 @@
     "prop-types": "^15.6.2"
   },
   "cypres-cucumber-preprocessor": {
-    "nonGlobalStepDefinitions": true
+    "nonGlobalStepDefinitions": false
   },
   "keywords": [],
   "description": "Shopping cart",

@@ -4,7 +4,7 @@ Given('I open the PLP', () => {
     cy.visit('localhost:3000')
     cy.wait(2000)
     cy.get('[class=products-found]').invoke('text').as('txt')
-});
+})
 
 When('I click in the XS size filter', () => {
     cy.get('[class=checkmark]').contains('XS').click()
