@@ -1,6 +1,6 @@
-Feature: sizeFilters
+Feature: Size Filters
 
-    I can filter t-shirts by size
+    As an user I can filter the products by size
 
     Scenario: Size XS filter
         Given I open the PLP
@@ -9,7 +9,7 @@ Feature: sizeFilters
 
     Scenario: Size S filter
         Given I open the PLP
-        When I click in the "M" size filter
+        When I click in the "S" size filter
         Then Only these shirts are shown
 
     Scenario: Size M filter
